@@ -33,6 +33,7 @@ on fs
     mount yaffs2 mtd@cache /cache
     mount yaffs2 mtd@datadata /datadata
     mount_all /fstab.aries
+    swapon_all fstab.aries
 
 # We chown/chmod /efs because mount is run as root + defaults
     mkdir /efs 0775 radio radio
@@ -43,6 +44,9 @@ on fs
 
 # insmod the touchscreen driver
     insmod  /system/lib/modules/qt602240.ko
+
+# insmod the wifi driver
+    insmod  /system/lib/modules/bcmdhd.ko
 
 # Permissions for System Server and daemons.
     chown system system /sys/class/backlight/s5p_bl/brightness
