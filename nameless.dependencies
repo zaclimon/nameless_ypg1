@@ -1,0 +1,8 @@
+[
+ {
+   "remote": "github",
+   "repository": "bbelos/android_kernel_samsung_aries",
+   "target_path": "kernel/samsung/ypg13.0",
+   "branch": "cm-11.0-ypg1-dev"
+ }
+]
